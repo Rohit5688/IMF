@@ -30,5 +30,5 @@ steps:
 - task: publishHtml@1
   inputs:
     artifactName: 'Regression Report'
-    htmlFilePath: 'd:\a\1\s\IMF\target/generated-report/index.html'
+    htmlFilePath: 'd:\a\1\s\IMF\target/generated-report/'
 
