@@ -14,7 +14,7 @@ steps:
   inputs:
     mavenPomFile: 'IMF/pom.xml'
     goals: 'clean install cluecumber-report:reporting'
-    options: '-Dbrowser="chrome_linux_headless"'
+    options: '-Dbrowser="chrome_win_headless"'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
@@ -24,4 +24,4 @@ steps:
 - task: publishHtml@1
   inputs:
     artifactName: 'Regression Report'
-    htmlFilePath: '/home/vsts/work/1/s/IMF/target/generated-report/index.html'
+    htmlFilePath: 'd:\a\1\s\IMF\target/generated-report/index.html'
