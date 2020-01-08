@@ -13,7 +13,8 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'IMF/pom.xml'
-    goals: 'clean install cluecumber-report:reporting -Dbrowser="chrome_linux_headless"'
+    goals: 'clean install cluecumber-report:reporting'
+    options: '-Dbrowser="chrome_linux_headless"'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
