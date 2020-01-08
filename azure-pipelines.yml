@@ -14,7 +14,7 @@ steps:
   inputs:
     mavenPomFile: 'IMF/pom.xml'
     goals: 'clean install cluecumber-report:reporting'
-    options: 'browser="chrome_linux_headless"'
+    options: '-Dbrowser="chrome_linux_headless"'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
