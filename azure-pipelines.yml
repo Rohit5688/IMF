@@ -23,12 +23,23 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: PublishTestResults@2
-  inputs:
-    testResultsFormat: 'JUnit'
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+        
 - task: publishHtml@1
   inputs:
     artifactName: 'Regression Report'
     htmlFilePath: 'd:\a\1\s\IMF\target/generated-report/'
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+
+- task: ArchiveFiles@2
+inputs:
+        rootFolderOrFile: 'd:\a\1\s\IMF\target/generated-report/'
+        includeRootFolder: true
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
+
+
 
