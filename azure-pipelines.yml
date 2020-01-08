@@ -27,7 +27,7 @@ steps:
 - task: publishHtml@1
   inputs:
     artifactName: 'Regression Report'
-    htmlFilePath: 'd:\a\1\s\IMF\target/generated-report/'
+    htmlFilePath: 'd:\a\1\s\IMF\target/generated-report/index.html'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
