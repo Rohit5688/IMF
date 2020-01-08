@@ -15,7 +15,8 @@ steps:
     mavenPomFile: 'IMF/pom.xml'
     goals: 'clean install cluecumber-report:reporting'
     options: '-Dbrowser="chrome_win_headless"'
-    publishJUnitResults: false
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
@@ -25,7 +26,7 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: 'd:\a\1\s\IMF\target/generated-report/index.html'
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
 - task: publishHtml@1
   inputs:
     artifactName: 'Regression Report'
