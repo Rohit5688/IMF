@@ -85,7 +85,7 @@ public class SharedDriver extends EventFiringWebDriver {
 		case "chrome_win_headless":
 		case "CHROME_WIN_HEADLESS":
 			ChromeOptions chrome_win_headless = new ChromeOptions();
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_Win.exe");
+			System.setProperty("webdriver.chrome.driver", "src/test/resource/Driver/chromedriver_Win.exe");
 			chrome_win_headless.addArguments("--start-maximized");
 			chrome_win_headless.setPageLoadStrategy(PageLoadStrategy.NONE);
 			chrome_win_headless.addArguments("--incognito");
@@ -103,7 +103,7 @@ public class SharedDriver extends EventFiringWebDriver {
 		case "chrome_linux_headless":
 		case "CHROME_LINUX_HEADLESS":
 			ChromeOptions chromeoptionsHeadless = new ChromeOptions();
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_linux");
+			System.setProperty("webdriver.chrome.driver", "src/test/resource/Driver/chromedriver_linux");
 			chromeoptionsHeadless.addArguments("--start-maximized");
 			chromeoptionsHeadless.setPageLoadStrategy(PageLoadStrategy.NONE);
 			chromeoptionsHeadless.addArguments("--incognito");
@@ -121,7 +121,7 @@ public class SharedDriver extends EventFiringWebDriver {
 		case "chrome_linux":
 		case "CHROME_LINUX":
 			ChromeOptions chromeoptionlinux = new ChromeOptions();
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver_linux");
+			System.setProperty("webdriver.chrome.driver", "src/test/resource/Driver/chromedriver_linux");
 			chromeoptionlinux.addArguments("--start-maximized");
 			chromeoptionlinux.setPageLoadStrategy(PageLoadStrategy.NONE);
 			chromeoptionlinux.addArguments("--incognito");
