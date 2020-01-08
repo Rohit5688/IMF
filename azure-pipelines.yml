@@ -34,12 +34,11 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
 
 - task: ArchiveFiles@2
-inputs:
-        rootFolderOrFile: 'd:\a\1\s\IMF\target/generated-report/'
-        includeRootFolder: true
-        archiveType: 'zip'
-        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-        replaceExistingArchive: true
-
+  inputs:
+    rootFolderOrFile: 'd:\a\1\s\IMF\target/generated-report/'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
 
 
