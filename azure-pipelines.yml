@@ -23,4 +23,4 @@ steps:
 - task: publishHtml@1
   inputs:
     artifactName: 'Regression Report'
-    htmlFilePath: 'C:\Users\Rohit\git\IMF\IMF\target\generated-report'
+    htmlFilePath: '**/target/generated-report/index.html'
